@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load cms_tags cache menu_tags %}
+
+{% block assets_extended %}
+    <title>FG: {% page_attribute "page_title" %}</title>
+{% endblock %}
+
+{% block content %}
+    <div id="header">
+      {% cms_toolbar %}
+      <div class="header_text"><a href="/">FLORENCE GRENDE</a></div>
+      <div id="nav">
+        <ul class="nav">
+          {% show_menu 0 100 100 100 %}
+        </ul>
+      </div>
+    </div>
+    {% placeholder base_content %}
+    {% block base_content %}{% endblock %}
+    {# TODO: Add footer with social media and copyright #}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% load sekizai_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html wf-frenchcanon1frenchcanon2-n4-active wf-frenchcanon1frenchcanon2-i4-active wf-verasans1verasans2-n4-active wf-verasans1verasans2-i4-active wf-verasans1verasans2-n7-active wf-verasans1verasans2-i7-active wf-active>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {% addtoblock "css" %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" charset="utf-8">
+    {% endaddtoblock %}
+    {% render_block "css" %}
+    {% block assets_extended %}{% endblock %}
+  </head>
+  <body class="zinnia {% block body-class %}{% endblock %}">
+    {% block content %}{% endblock %}
+    {% render_block "js" %}
+  </body>
+</html>

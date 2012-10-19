@@ -1,0 +1,57 @@
+body {
+    font-family: french-canon-1,french-canon-2,georgia,serif;
+}
+
+.header_text {
+    font-size: 2.5em;
+    letter-spacing: 20px;
+    font-family: mono;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-bottom: solid 150px;
+}
+
+.header_text a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#header {
+    text-align: center;
+}
+
+#nav {
+    font-size: 3em;
+    display: inline-block;
+    margin: 15px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+}
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    float: left;
+    border-left: 10px solid;
+    border-right: 10px solid;
+    text-align: center;
+    width: 275px;
+}
+
+#nav a {
+    padding: 5px;
+    text-decoration: none;
+    color: #003300;
+}
+
+#nav li:hover {
+    background-color: #00FF00;
+}
+
+#nav li.selected {
+    background-color: #FF0000;
+}
