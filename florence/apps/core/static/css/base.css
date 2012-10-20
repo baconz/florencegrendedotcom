@@ -1,5 +1,6 @@
 body {
     font-family: french-canon-1,french-canon-2,georgia,serif;
+    line-height: 1;
 }
 
 .header_text {
@@ -16,7 +17,7 @@ body {
     color: #000000;
 }
 
-#header {
+#main-header {
     text-align: center;
 }
 

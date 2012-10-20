@@ -4,13 +4,16 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     {% addtoblock "css" %}
+        <link rel="shortcut icon" href="{{STATIC_URL}}images/favicon.png" />
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/screen.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
         <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" charset="utf-8">
     {% endaddtoblock %}
     {% render_block "css" %}
     {% block assets_extended %}{% endblock %}
   </head>
-  <body class="zinnia {% block body-class %}{% endblock %}">
-    {% block content %}{% endblock %}
+  <body {% block body-attr %}{% endblock %}>
+    {% block body %}{% endblock %}
     {% render_block "js" %}
   </body>
 </html>
