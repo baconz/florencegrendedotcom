@@ -6,12 +6,15 @@ from django.conf import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    # Newsletter
+    (r'^newsletter/', include('newsletter.urls')),
     url(r'^admin/', include(admin.site.urls)),
     # Zinnia
-    url(r'^weblog/', include('zinnia.urls')),
+    #url(r'^weblog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
     # CMS
     url(r'^', include('cms.urls')),
+
 )
 
 if settings.DEBUG:

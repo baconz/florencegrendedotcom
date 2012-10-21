@@ -12,10 +12,10 @@ django-sekizai==0.6.1
 
 # CMS Plugins We'll Want:
 cmsplugin-contact==1.0.0
-cmsplugin-news==0.3c
 cmsplugin-zinnia==0.3
-# https://gist.github.com/1228685 -- Event List
+#cmsplugin-news==0.3c
 
 # Newsletter
-django-newsletter==0.2.6
-django-ses==0.4.1
+# django-newsletter==0.2.6
+# django-ses==0.4.
+# django-tinymce==1.5.1b2

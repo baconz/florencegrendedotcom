@@ -9,6 +9,10 @@
 {% block body %}
     <div id="main-header">
       {% cms_toolbar %}
+      <div class="social_container">
+        <a href="https://twitter.com/florencegrende"><div class="twitter_icon"></div></a>
+        <a href="https://www.facebook.com/florence.grende"><div class="facebook_icon"></div></a>
+      </div>
       <div class="header_text"><a href="/">FLORENCE GRENDE</a></div>
       <div id="nav">
         <ul class="nav">
@@ -16,8 +20,5 @@
         </ul>
       </div>
     </div>
-    {% placeholder base_content %}
     {% block base_content %}{% endblock %}
-    {# TODO: Add footer with social media and copyright and newsletter signup? #}
-    {# TODO: FAVICON #}
 {% endblock %}

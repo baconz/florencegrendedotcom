@@ -132,6 +132,7 @@ INSTALLED_APPS = (
     'django.contrib.comments',
     # Project Apps
     'florence.apps.core',
+    'florence.apps.cms_events',
     # Supporting Apps
     'south',
     'mptt',
@@ -148,14 +149,13 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.video',
     'cms.plugins.twitter',
-    ## TODO: Events
-    #'cms.plugins.contact',
-    #'cms.plugins.news',
+    'cmsplugin_contact',
     # ZINNIA
     'zinnia',
     'tagging',
     'cmsplugin_zinnia',
-    #'newsletter',
+    # 'newsletter',
+    #'cms.plugins.news',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -194,8 +194,8 @@ TEMPLATE_DIRS = (
 
 # Additional CMS Templates
 CMS_TEMPLATES = (
-    ('template_1.html', 'Template One'),
-    ('template_2.html', 'Template Two'),
+    ('basic_content.html', 'Basic Content'),
+    ('contact_us.html', 'Contact Us'),
 )
 
 ZINNIA_ENTRY_BASE_MODEL = 'cmsplugin_zinnia.placeholder.EntryPlaceholder'

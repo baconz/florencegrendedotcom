@@ -19,3 +19,5 @@ SECRET_KEY = os.getenv('DJ_SECRET_KEY')
 ## TODO: Fill me in
 MEDIA_ROOT = ''
 STATIC_ROOT = ''
+
+AKISMET_SECRET_API_KEY = ""

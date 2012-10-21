@@ -1,19 +1,29 @@
 {% load sekizai_tags %}
+{% load static from staticfiles %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html wf-frenchcanon1frenchcanon2-n4-active wf-frenchcanon1frenchcanon2-i4-active wf-verasans1verasans2-n4-active wf-verasans1verasans2-i4-active wf-verasans1verasans2-n7-active wf-verasans1verasans2-i7-active wf-active>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     {% addtoblock "css" %}
-        <link rel="shortcut icon" href="{{STATIC_URL}}images/favicon.png" />
-        <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/screen.css" />
-        <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" charset="utf-8">
+        <link rel="shortcut icon" href="{% static "images/favicon.png"  %}" />
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/css/screen.css" %}"/>
+        <link rel="stylesheet" type="text/css" media="print" href="{% static "zinnia/css/print.css" %}" />
+        <link rel="stylesheet" href="{% static "css/base.css" %}" type="text/css" charset="utf-8">
+    {% endaddtoblock %}
+    {% addtoblock "js" %}
+    <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-35745649-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     {% endaddtoblock %}
     {% render_block "css" %}
     {% block assets_extended %}{% endblock %}
   </head>
   <body {% block body-attr %}{% endblock %}>
-    {% block body %}{% endblock %}
-    {% render_block "js" %}
+    <div id="container">
+      {% block body %}{% endblock %}
+      {% render_block "js" %}
+      <div class="clearfooter"></div>
+    </div>
+    <div id="footer">
+      &copy 2012 Florence Grende
+    </div>
   </body>
 </html>
