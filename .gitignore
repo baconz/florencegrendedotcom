@@ -36,4 +36,4 @@ florence/static/*
 # Stupid Emacs
 *~
 
-*/globalconfig.py
+*/globalconfig.py.elasticbeanstalk/.elasticbeanstalk/
