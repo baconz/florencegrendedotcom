@@ -19,6 +19,7 @@ div.zinnia {
 
 .zinnia #sidebar h3 {
     background-color: white;
+    border-radius: 5px;
     border: solid 2px grey;
     color: #006262;
 }
